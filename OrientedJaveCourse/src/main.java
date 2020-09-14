@@ -30,7 +30,7 @@ public class main{
 		System.out.print(isequal(number2));
 		
 	}
-	public static boolean isequal(int number2) {
+	public static boolean isequal(int number2) { // function returns boolean
 		return number2%2==0;
 	}
 }
