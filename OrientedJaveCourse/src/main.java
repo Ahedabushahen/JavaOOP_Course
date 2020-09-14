@@ -28,9 +28,9 @@ public class main{
 		System.out.println(sum);
 		System.out.println("divison is:"+(double)number1/number2); //Convention to double 
 		System.out.print(isequal(number2));
-		
 	}
 	public static boolean isequal(int number2) { // function returns boolean
 		return number2%2==0;
 	}
+	
 }

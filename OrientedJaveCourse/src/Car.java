@@ -22,4 +22,6 @@ public class Car {
 		this.color = color;
 		this.company = company;
 	}
+	Car ford = new Car();
+	
 }
