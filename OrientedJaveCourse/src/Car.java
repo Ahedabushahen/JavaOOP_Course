@@ -1,5 +1,7 @@
 
 public class Car {
+	public static int tottald= 0;
+	private int id;
 	private int price;
 	private int numberofseats;
 	private int maxspeeed;
@@ -7,6 +9,8 @@ public class Car {
 	private String company;
 	
 	public Car() { //independent constructor , no input!
+		tottald++;
+		this.id = tottald;
 		this.price = 1500000;
 		this.numberofseats =5;
 		this.maxspeeed = 200;
@@ -16,6 +20,8 @@ public class Car {
 		
 	}
 	public Car(int price,int nos,int ms,String color,String company) { // input constructor 
+		tottald++;
+		this.id = tottald;
 		this.price = price;
 		this.numberofseats = nos;
 		this.maxspeeed=ms;
@@ -53,9 +59,12 @@ public class Car {
 	public void setCompany(String company) {
 		this.company = company;
 	}
+	public int getid() {
+		return this.id;
+	}
 	public String toString() {
 		return "Car [price=" + price + ", numberofseats=" + numberofseats + ", maxspeeed=" + maxspeeed + ", color="
-				+ color + ", company=" + company + "]";
+				+ color + ", company=" + company + ", id=" + id +"]" ;
 	}
 	
 	}
