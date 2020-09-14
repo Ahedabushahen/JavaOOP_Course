@@ -22,6 +22,41 @@ public class Car {
 		this.color = color;
 		this.company = company;
 	}
-	Car ford = new Car();
+	/* Getters and Setters */
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public int getNumberofseats() {
+		return numberofseats;
+	}
+	public void setNumberofseats(int numberofseats) {
+		this.numberofseats = numberofseats;
+	}
+	public int getMaxspeeed() {
+		return maxspeeed;
+	}
+	public void setMaxspeeed(int maxspeeed) {
+		this.maxspeeed = maxspeeed;
+	}
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public String getCompany() {
+		return company;
+	}
+	public void setCompany(String company) {
+		this.company = company;
+	}
+	public String toString() {
+		return "Car [price=" + price + ", numberofseats=" + numberofseats + ", maxspeeed=" + maxspeeed + ", color="
+				+ color + ", company=" + company + "]";
+	}
 	
-}
+	}
+
