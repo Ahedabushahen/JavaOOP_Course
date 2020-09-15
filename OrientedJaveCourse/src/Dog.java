@@ -37,7 +37,7 @@ public class Dog extends Mammal {
 	}
 
 	public void eat(String food) {
-		System.out.println("i have eaten:"+food);
+		System.out.println(name + "i have eaten:"+food);
 		
 	}
 
