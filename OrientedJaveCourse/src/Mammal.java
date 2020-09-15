@@ -1,6 +1,6 @@
 
 public abstract  class Mammal extends Animal { // abstract class!! cannot create instance!
-											   // any extending classes methods must use abstract methods
+											   // any extending classes methods must use abstract methods!
 	
 	protected int milkProduction;
 	protected int milkNeeded;
