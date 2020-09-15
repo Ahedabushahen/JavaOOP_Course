@@ -36,4 +36,19 @@ public class Dog extends Mammal {
 		this.isNatural = isNatural;
 	}
 
+	public void eat(String food) {
+		System.out.println("i have eaten:"+food);
+		
+	}
+
+	public void drink(String drink) {
+		System.out.println("i have drank:"+drink);
+		
+	}
+
+	public boolean hasEaten() {
+		return false;
+	}
+	
+
 }
