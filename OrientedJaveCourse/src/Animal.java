@@ -1,5 +1,5 @@
 
-public class Animal {
+public abstract class Animal implements IEat {
 	protected int weight;
 	protected int height;
 	protected String color;
@@ -32,5 +32,8 @@ public class Animal {
 
 	public void setColor(String color) {
 		this.color = color;
+	}
+	public void eat() {
+		System.out.println("i have eaten somthing!");
 	}
 }
