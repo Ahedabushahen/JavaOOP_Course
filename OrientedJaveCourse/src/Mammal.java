@@ -1,5 +1,5 @@
 
-public class Mammal extends Animal {
+public abstract  class Mammal extends Animal { // abstract class!! cannot create instance!
 	
 	protected int milkProduction;
 	protected int milkNeeded;
