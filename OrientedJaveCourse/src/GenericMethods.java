@@ -18,11 +18,8 @@ public class GenericMethods {
 		System.out.println();
 	}
 	public static <T extends Comparable<T>> T getMax (T[] objects){
-<<<<<<< HEAD
+
 		T max = objects[0];
-=======
-		T max = null;
->>>>>>> branch 'master' of https://github.com/BlackChesire/OrientedJavaCourse.git
 		for(T obj: objects) {
 			if(obj.compareTo(max)>0) max = obj;
 	}

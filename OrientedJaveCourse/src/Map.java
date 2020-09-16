@@ -1,5 +1,5 @@
 
-public class Map { //todo!!!
+public class Map { //todo!!
 	private long time;
 	private Tile[][] tiles;
 	public class Tile{
@@ -9,7 +9,7 @@ public class Map { //todo!!!
 		public Tile(int x, int y) {
 			this.x = x;
 			this.y = y;
-			id = time / 3 * 5;
+			//id = time / 3 * 5;
 			
 		}
 	}
