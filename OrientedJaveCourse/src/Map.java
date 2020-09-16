@@ -1,5 +1,5 @@
 
-public class Map { //todo!!
+public class Map { //todo!!!
 	private long time;
 	private Tile[][] tiles;
 	public class Tile{

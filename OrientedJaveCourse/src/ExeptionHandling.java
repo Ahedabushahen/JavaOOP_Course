@@ -13,7 +13,7 @@ public class ExeptionHandling {
 		System.out.println("Enter Age:");
 		int age = s.nextInt();
 		if(age < 18) try {
-			throw new AgeException("too young!!");
+			throw new AgeException("too young!!!");
 		} catch (AgeException  e) {
 			age = 21;
 		}
