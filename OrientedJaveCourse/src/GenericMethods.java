@@ -10,11 +10,20 @@ public class GenericMethods {
 		printArr(arr2);
 		printArr(arr3);
 		}
-	
+	// generic methods used to use an methods of all types of variables.
 	public static <T> void printArr(T[] Objects) {
 		for(T obj: Objects) {
 			System.out.println(obj+" ");
 		}
 		System.out.println();
 	}
+	public static <T extends Comparable<T>> T getMax (T[] objects){
+		T max = objects[0];
+		for(T obj: objects) {
+			if(obj.compareTo(max)>0) max = obj;
+	}
+		return max;
+	}
 }
+	
+
