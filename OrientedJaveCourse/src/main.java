@@ -6,6 +6,10 @@ public class main{
 		Animal B = new Dog(20,40,"white",6,7,"Husky","Batz",true); // Polymorphism
 		Dog Batz = new Dog(20,40,"white&black",6,7,"Husky","Batz",true);
 		Batz.eat("bunzo");
+		Node<Integer> intNode = new Node<Integer>();
+		Node<String> StringNode = new Node<String>();
+		intNode.setInfo(3);
+		StringNode.setInfo("Asaf");
 		((Dog)B).getType(); // Polymorphism, B is a type of animal , there4 we will use ((dog)) to use methods of dog
 }	
 }
