@@ -1,9 +1,10 @@
-/* inner class */
+/* inner class - can interact with local variables and objects */
+/* https://javabook.co.il/book/inner.pdf */
 public class Map { 
 	private int time;
 	private Tile[][] tiles;
 	public Map(int width, int height) {
-		
+		//TODO
 	}
 	public class Tile{
 		private int x;
