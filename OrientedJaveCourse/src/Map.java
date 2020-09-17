@@ -4,7 +4,15 @@ public class Map {
 	private int time;
 	private Tile[][] tiles;
 	public Map(int width, int height) {
-		//TODO
+		tiles = new Tile[height][width];
+		time = 0;
+		for(int i = 0; i < tiles.length;i++) {
+			for(int j = 0; j < tiles[0].length;j++) {
+				tiles[i][j] = new Tile(j,i);
+				time++;
+				
+			}
+		}
 	}
 	public class Tile{
 		private int x;
