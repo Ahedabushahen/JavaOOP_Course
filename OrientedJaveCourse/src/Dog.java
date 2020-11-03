@@ -1,12 +1,12 @@
 
-public class Dog extends Mammal {
+public class Dog extends Animal {
 	
 	private String type;
 	private String name;
 	private boolean isNatural;
 	
 	public Dog(int weight,int height,String color,int mp,int mn,String type,String name, boolean isNatural) {
-		super(weight,height,color,mp,mn);
+		super(weight,height,color);
 		this.type = type +"";
 		this.name = name +"";
 		this.isNatural = isNatural;
