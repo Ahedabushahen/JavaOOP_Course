@@ -2,13 +2,13 @@ package ShimonLAB;
 
 public class Atm {
 	String dbName;
-	Db db;
-	Keyboard kbd;
-	Screen scr;
-	int user;
-	String pass;
-	int choice;
-	int moneywithdraw;
+	private Db db;
+	private Keyboard kbd;
+	private Screen scr;
+	public int user;
+	public String pass;
+	public int choice;
+	public int moneywithdraw;
 
 public Atm(String dbName) {
 	this.dbName = dbName;
@@ -16,7 +16,7 @@ public Atm(String dbName) {
 	this.kbd = new Keyboard();
 	this.scr = new Screen();
 }
-void go() {
+public void go() {
 	scr.displayGreetings();
 	scr.displayAcctPrompt();
 	user = kbd.getAcct();
@@ -31,26 +31,41 @@ void go() {
 		while (!db.verify(user, pass) == true);
 }
 void choices(int choice) {
+	while(choice != 4) {
 	switch(choice) {
-	  case 1:
-		  scr.displayBalance();
-		  System.out.print(db.getBalance());
+	  case 1: // view balance
+		  double balance = db.getBalance();
+		  scr.displayBalance(balance);
+		  scr.displayMainMenu();
+		  choice = kbd.getChoice();
+		  choices(choice);
 	    break;
-	  case 2:
+	  case 2: // withdraw cash
 		  scr.displayWidrawMenu();
 		 int amount = kbd.getChoice();
 		 moneywithdraw = db.withdraw(amount);
+		 if(moneywithdraw == 1) {
+			 scr.printOverDraft();
+		 }
+		 else {
 		 scr.printConfirmation(moneywithdraw);
+		 scr.displayMainMenu();
+		 choice = kbd.getChoice();
+		 choices(choice);
 		 break;
-	  case 3:
+		 }
+	  case 3: //deposit funds
 		  scr.DisplayDepositMenu();
 		  double depositAmount = kbd.getDepositAmount();
 		  db.deposit(depositAmount);
 		  scr.printDeposit(depositAmount);
+		  scr.displayMainMenu();
+		  choice = kbd.getChoice();
+		  choices(choice);
 		break;
-	  default:
+	  default: //exit
 		  System.exit(0);
-		
+	}
 	}
 	
 }

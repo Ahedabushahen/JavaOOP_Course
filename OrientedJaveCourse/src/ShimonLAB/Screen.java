@@ -30,9 +30,10 @@ public void displayWidrawMenu() {
 	System.out.print("Choose a withdrawal amount:");
 
 }
-public void displayBalance() {
+public void displayBalance(double balance) {
 	System.out.println("Balance menu");
 	System.out.print("Your balance is:");
+	System.out.println(balance);
 
 }
 public void DisplayDepositMenu() {
@@ -49,5 +50,8 @@ public void printDeposit(double depositAmount) {
 	 System.out.print("you have deposit:");
 	 System.out.print(depositAmount);
 
+}
+public void printOverDraft() {
+	System.out.println("Error, you cannot withdraw, balance is too low!");
 }
 }
