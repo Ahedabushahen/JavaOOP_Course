@@ -1,5 +1,6 @@
 package ShimonLAB;
 
+
 public class Atm {
 	String dbName;
 	private Db db;
@@ -18,12 +19,12 @@ public Atm(String dbName) {
 }
 public void go() {
 	scr.displayGreetings();
+	do {
 	scr.displayAcctPrompt();
 	user = kbd.getAcct();
 	System.out.println();
 	scr.displayPwPrompt();
 	pass = kbd.getPassword();
-	do {
 		  scr.displayMainMenu();
 		  choice = kbd.getChoice();
 		  choices(choice);
@@ -39,22 +40,23 @@ void choices(int choice) {
 		  scr.displayMainMenu();
 		  choice = kbd.getChoice();
 		  choices(choice);
-	    break;
-	  case 2: // withdraw cash
+		  break;
+	  case 2:
 		  scr.displayWidrawMenu();
 		 int amount = kbd.getChoice();
 		 moneywithdraw = db.withdraw(amount);
 		 if(moneywithdraw == 1) {
 			 scr.printOverDraft();
+			 scr.displayMainMenu();
+			 choice = kbd.getChoice();
+			 choices(choice);
 		 }
-		 else {
 		 scr.printConfirmation(moneywithdraw);
 		 scr.displayMainMenu();
 		 choice = kbd.getChoice();
 		 choices(choice);
 		 break;
-		 }
-	  case 3: //deposit funds
+	  case 3:
 		  scr.DisplayDepositMenu();
 		  double depositAmount = kbd.getDepositAmount();
 		  db.deposit(depositAmount);
@@ -62,8 +64,8 @@ void choices(int choice) {
 		  scr.displayMainMenu();
 		  choice = kbd.getChoice();
 		  choices(choice);
-		break;
-	  default: //exit
+		  break;
+	  default: 
 		  System.exit(0);
 	}
 	}

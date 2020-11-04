@@ -1,6 +1,6 @@
 package ShimonLAB;
-import java.util.Scanner; 
 
+import java.util.Scanner; 
 public class Keyboard {
 	Scanner s;
 	String password = null;
