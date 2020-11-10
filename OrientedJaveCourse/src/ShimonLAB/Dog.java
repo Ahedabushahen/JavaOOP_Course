@@ -11,4 +11,16 @@ public Dog(double weight,int getstation,boolean vac,String name, int fleas){
 public void bark() {
 	
 }
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public int getFleas() {
+	return fleas;
+}
+public void setFleas(int fleas) {
+	this.fleas = fleas;
+}
 }

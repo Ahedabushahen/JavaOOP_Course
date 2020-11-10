@@ -9,4 +9,10 @@ public Cat(double weight,int getstation,boolean spots,boolean spayed) {
 public void scartch() {
 	
 }
+public boolean isSpayed() {
+	return spayed;
+}
+public void setSpayed(boolean spayed) {
+	this.spayed = spayed;
+}
 }

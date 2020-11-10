@@ -12,5 +12,11 @@ public void roar() {
 public void prey() {
 	
 }
+public int getMates() {
+	return mates;
+}
+public void setMates(int mates) {
+	this.mates = mates;
+}
 
 }

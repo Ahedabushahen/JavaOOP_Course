@@ -9,4 +9,10 @@ public Feline(double weight,int getstation,boolean spots) {
 public void climb() {
 	
 }
+public boolean isSpots() {
+	return spots;
+}
+public void setSpots(boolean spots) {
+	this.spots = spots;
+}
 }
