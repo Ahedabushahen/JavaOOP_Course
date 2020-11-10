@@ -11,8 +11,8 @@ public class Mammal {
 	public Mammal(){
 		this.weight = 2.23;
 		this.getstation = 1;
+		
 	}
-
 	public double getWeight() {
 		return weight;
 	}
@@ -21,7 +21,7 @@ public class Mammal {
 		this.weight = weight;
 	}
 
-	public int getGetstation() {
+	public int getGestation() {
 		return getstation;
 	}
 
