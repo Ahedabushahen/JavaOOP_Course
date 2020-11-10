@@ -1,12 +1,16 @@
 package ShimonLAB;
 
 public class Mammal {
-	public double weight;
-	public int getstation;
+	private double weight;
+	private int getstation;
 
 	public Mammal(double weight,int getstation){
 		this.weight = weight;
 		this.getstation = getstation;
+	}
+	public Mammal(){
+		this.weight = 2.23;
+		this.getstation = 1;
 	}
 
 	public double getWeight() {

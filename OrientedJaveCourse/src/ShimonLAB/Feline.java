@@ -1,10 +1,14 @@
 package ShimonLAB;
 
 public class Feline extends Mammal {
-	boolean spots;
+	private boolean spots;
 public Feline(double weight,int getstation,boolean spots) {
 	super(weight,getstation);
 	this.spots = spots;
+}
+public Feline() {
+	super();
+	this.spots = true;
 }
 public void climb() {
 	
