@@ -6,4 +6,7 @@ public Feline(double weight,int getstation,boolean spots) {
 	super(weight,getstation);
 	this.spots = spots;
 }
+public void climb() {
+	
+}
 }

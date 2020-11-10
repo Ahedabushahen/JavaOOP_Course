@@ -7,4 +7,7 @@ public Canine(double weight,int getstation,boolean vac) {
 	super(weight,getstation);
 	this.vac = vac;
 }
+public void wail() {
 }
+}
+

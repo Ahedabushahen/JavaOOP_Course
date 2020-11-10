@@ -8,4 +8,7 @@ public Dog(double weight,int getstation,boolean vac,String name, int fleas){
 	this.name = name;
 	this.fleas = fleas;
 }
+public void bark() {
+	
+}
 }
