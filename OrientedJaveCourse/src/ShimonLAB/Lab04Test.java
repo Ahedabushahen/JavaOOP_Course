@@ -9,7 +9,6 @@ public class Lab04Test {
 		System.out.println(cat.getGestation());
 	    System.out.println(d.getGestation());
 	    System.out.println(l.getGestation());
-
 	}
 
 }
