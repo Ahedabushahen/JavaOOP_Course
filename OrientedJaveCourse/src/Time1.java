@@ -131,7 +131,6 @@ public class Time1 implements Time {
 
 	@Override
 	public long difference(Time t) {
-		
 		return this.getSecondsFromMidnight() - t.getSecondsFromMidnight();
 	}
 
