@@ -107,6 +107,6 @@ public class Time2 implements Time {
 
 	@Override
 	public String toString() {
-		return String.format("%02d:%02d:%02d", this.getHour(), this.getMinute(), this.getSecond());
+		return String.format("%02d:%02d:%02d", this.getHour(), this.getMinute(), this.getSecond()); //
 	}
 }
