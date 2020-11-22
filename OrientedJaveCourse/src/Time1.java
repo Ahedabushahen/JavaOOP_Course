@@ -105,7 +105,7 @@ public class Time1 implements Time {
 
 	@Override
 	public boolean before(Time t) {
-		if(this.getSecondsFromMidnight() < t.getSecondsFromMidnight())
+		if(this.getSecondsFromMidnight() <= t.getSecondsFromMidnight())
 			return true;
 		else
 		return false;
@@ -113,7 +113,7 @@ public class Time1 implements Time {
 
 	@Override
 	public boolean after(Time t) {
-		if(this.getSecondsFromMidnight() < t.getSecondsFromMidnight())
+		if(this.getSecondsFromMidnight() <= t.getSecondsFromMidnight())
 			return false;
 		else
 		return true;
@@ -121,7 +121,6 @@ public class Time1 implements Time {
 
 	@Override
 	public long difference(Time t) {
-		
 		return this.getSecondsFromMidnight() - t.getSecondsFromMidnight();
 	}
 
