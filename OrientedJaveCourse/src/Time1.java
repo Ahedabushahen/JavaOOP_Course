@@ -61,7 +61,7 @@ public class Time1 implements Time {
 
 	@Override
 	public long getSecondsFromMidnight() {
-		return ((long) (this.time1[0]) * SECS_PER_HOUR)+ ((long) (this.time1[1]) * SECS_PER_MIN)+ (long) this.time1[2]; //
+		return ((long) (this.time1[0]) * SECS_PER_HOUR)+ ((long) (this.time1[1]) * SECS_PER_MIN)+ (long) this.time1[2]; 
 	}
 
 	@Override
