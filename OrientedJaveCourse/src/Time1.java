@@ -6,24 +6,19 @@
 
 public class Time1 implements Time {
 		private short[] time1;
-		private long secondsFromMidnigt;
-		private int remainder;
-		public Time1(short hour,short minute,short seconds) {
+		
+	public Time1(short hour,short minute,short seconds) {
 			this.time1 = new short[3];
 			this.time1[0] = hour;
 			this.time1[1] = minute;
 			this.time1[2] = seconds;
 		}
 	public Time1(long secondsFromMidnigt) {
-		this.secondsFromMidnigt = secondsFromMidnigt;
 		this.time1 = new short[3];
 		{
-		    this.time1[0] = (short) (secondsFromMidnigt / SECS_PER_HOUR);
-		    remainder = (short) secondsFromMidnigt -  this.time1[0] * SECS_PER_HOUR;
-		    this.time1[1] = (short) (remainder / SECS_PER_MIN);
-		    remainder = remainder - this.time1[1] * SECS_PER_MIN;
-		    this.time1[2] = (short) remainder;
-
+		    this.time1[0] = ((short) (secondsFromMidnigt / SECS_PER_HOUR));
+		    this.time1[1] = ((short) ((secondsFromMidnigt % SECS_PER_HOUR) / SECS_PER_MIN));
+		    this.time1[2] = ((short) ((secondsFromMidnigt % SECS_PER_HOUR) % SECS_PER_MIN));
 		}
 	}
 	public Time1() {
@@ -66,10 +61,7 @@ public class Time1 implements Time {
 
 	@Override
 	public long getSecondsFromMidnight() {
-		secondsFromMidnigt = this.time1[0] * SECS_PER_HOUR;
-		secondsFromMidnigt += this.time1[1] * SECS_PER_MIN;
-		secondsFromMidnigt += this.time1[2];
-		return secondsFromMidnigt;
+		return ((long) (this.time1[0]) * SECS_PER_HOUR)+ ((long) (this.time1[1]) * SECS_PER_MIN)+ (long) this.time1[2];
 	}
 
 	@Override
@@ -99,11 +91,9 @@ public class Time1 implements Time {
 
 	@Override
 	public void setSecondsFromMidnight(long secondsFromMidnigt) {
-		this.secondsFromMidnigt = secondsFromMidnigt;
 		this.setHour((short) (secondsFromMidnigt / SECS_PER_HOUR));
-	    remainder = (short) secondsFromMidnigt -  this.time1[0] * SECS_PER_HOUR;
-		this.setMinute((short) (remainder / SECS_PER_MIN));
-		this.setSecond((short) remainder);
+		this.setMinute((short) ((secondsFromMidnigt % SECS_PER_HOUR) / SECS_PER_MIN));
+		this.setSecond((short) ((secondsFromMidnigt % SECS_PER_HOUR) % SECS_PER_MIN));
 	}
 
 	@Override
