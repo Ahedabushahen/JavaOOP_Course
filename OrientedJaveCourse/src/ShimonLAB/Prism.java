@@ -1,3 +1,5 @@
+package ShimonLAB;
+
 public class Prism {
 	private double height;
 	private Shape2D base;

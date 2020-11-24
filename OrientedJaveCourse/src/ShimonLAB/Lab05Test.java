@@ -1,3 +1,5 @@
+package ShimonLAB;
+
 public class Lab05Test {
 
 	public static void main(String[] args) {

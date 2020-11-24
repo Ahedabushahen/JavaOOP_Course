@@ -1,3 +1,5 @@
+package ShimonLAB;
+
 public class Square extends Shape2D {
 	private double side;
 	public Square(double side) {
