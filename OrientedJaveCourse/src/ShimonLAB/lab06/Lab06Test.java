@@ -1,4 +1,6 @@
 package ShimonLAB.lab06;
+
+
 import java.util.Scanner;
 
 import java.io.FileNotFoundException;
@@ -14,15 +16,17 @@ public class Lab06Test {
 			if(s.hasNext()){
 				country = s.nextLine();
 			}
-			country = Character.toUpperCase(country.charAt(0)) + country.substring(1);
-			System.out.println(country);
-			if(c.exactMatch(country) != null)
-				System.out.println("The capital of " + country + " is " + c.exactMatch(country));
+			String[] sArr = c.prefixMatch(country);
+			for(String str : sArr) {
+				if(c.exactMatch(str) != null) {
+					System.out.println("The capital of " + str + " is " + c.exactMatch(str));
+				}
+			}
 		}
 		System.out.println("Good bye!");
 		s.close();
+
 }
-	
 	
 	
 }

@@ -1,4 +1,5 @@
 package ShimonLAB.lab06;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -17,6 +18,8 @@ public class Capitals {
 		    	  map.put(countery, city);
 		      }
 		      scanner.close();
+		      
+		     
 	}
 
 public String exactMatch(String country) {
