@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.*;
 public class Capitals {
-	public Map<String, String> map;
+	private Map<String, String> map;
 	public File capitals;
 	public Capitals() throws FileNotFoundException{
 		map = new HashMap<String, String>();
@@ -42,6 +42,11 @@ public String[] prefixMatch(String prefix) {
 
 	return countery_arr;
 
+}
+
+@Override
+public String toString() {
+	return map.size() + " records read.";
 }
 
 }
