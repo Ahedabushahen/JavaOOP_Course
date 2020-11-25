@@ -1,4 +1,4 @@
-
+/this code contibruted  by @Avichai-Aziz
 public class Time2 implements Time {
 
 	//fields
