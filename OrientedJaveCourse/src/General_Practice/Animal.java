@@ -1,3 +1,4 @@
+package General_Practice;
 
 public abstract class Animal implements IEat {
 	protected int weight;

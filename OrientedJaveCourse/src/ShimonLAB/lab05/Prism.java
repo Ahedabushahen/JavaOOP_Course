@@ -1,5 +1,4 @@
-package ShimonLAB;
-
+package ShimonLAB.lab05;
 public class Prism {
 	private double height;
 	private Shape2D base;

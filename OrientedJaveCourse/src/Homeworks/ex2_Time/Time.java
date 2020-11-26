@@ -1,3 +1,5 @@
+package Homeworks.ex2_Time;
+
 /**
  * @author Ron Sivan (ronny.sivan@gmail.com)
  * @author Michal Horovitz

@@ -1,3 +1,4 @@
+package General_Practice;
 
 public class GenericMethods {
 	public static void main(String[] args) {

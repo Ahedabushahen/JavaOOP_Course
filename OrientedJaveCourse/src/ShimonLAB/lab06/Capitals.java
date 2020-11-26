@@ -17,6 +17,7 @@ public class Capitals {
 		    	  map.put(countery, city);
 		      }
 		      scanner.close();
+		      System.out.println(map.size() + " records read.");
 		      
 		     
 	}
@@ -43,10 +44,22 @@ public String[] prefixMatch(String prefix) {
 
 }
 
-@Override
-public String toString() {
-	return map.size() + " records read.";
+public Map<String, String> getMap() {
+	return map;
 }
+
+public void setMap(Map<String, String> map) {
+	this.map = map;
+}
+
+public File getCapitals() {
+	return capitals;
+}
+
+public void setCapitals(File capitals) {
+	this.capitals = capitals;
+}
+
 
 }
 

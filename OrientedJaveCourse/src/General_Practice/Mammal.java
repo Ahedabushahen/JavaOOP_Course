@@ -1,3 +1,4 @@
+package General_Practice;
 
 public abstract  class Mammal extends Animal { // abstract class!! cannot create instance!
 											   // any extending classes methods must use abstract methods!

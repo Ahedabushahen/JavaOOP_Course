@@ -8,7 +8,6 @@ public class Lab06Test {
 		Capitals c = new Capitals();
 		String country = "";
 		Scanner s = new Scanner(System.in);
-		System.out.println(c.toString());
 		while(!(country.equals("end"))) {
 			System.out.print("Enter a country name (\"end\" to exit): ");
 			if(s.hasNext()){

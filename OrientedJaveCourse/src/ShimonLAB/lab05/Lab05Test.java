@@ -1,4 +1,4 @@
-package ShimonLAB;
+package ShimonLAB.lab05;
 
 public class Lab05Test {
 

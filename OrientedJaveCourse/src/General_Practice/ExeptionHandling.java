@@ -1,5 +1,8 @@
+package General_Practice;
+
 import java.util.Scanner;
 public class ExeptionHandling {
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		int arr[] = {1, 2, 3};
 		for(int i=1; i <= arr.length; i++) { // should be int i = 0 i < arr.length

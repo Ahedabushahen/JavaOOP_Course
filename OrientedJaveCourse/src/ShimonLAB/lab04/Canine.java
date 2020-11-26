@@ -1,4 +1,6 @@
-package ShimonLAB;
+package ShimonLAB.lab04;
+
+
 
 public class Canine extends Mammal{
 	private boolean vac;

@@ -1,3 +1,4 @@
+package ShimonLAB.lab03;
 import java.util.Scanner; 
 public class Keyboard {
 	Scanner s;

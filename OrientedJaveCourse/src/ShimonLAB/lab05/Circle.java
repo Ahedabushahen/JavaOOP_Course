@@ -1,4 +1,4 @@
-package ShimonLAB;
+package ShimonLAB.lab05;
 
 public class Circle extends Shape2D {
 	private double radius;

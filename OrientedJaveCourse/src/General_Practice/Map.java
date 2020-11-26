@@ -1,3 +1,5 @@
+package General_Practice;
+
 /* inner class - can interact with local variables and objects */
 /* https://javabook.co.il/book/inner.pdf */
 public class Map { 

@@ -1,4 +1,5 @@
-/this code contibruted  by @Avichai-Aziz
+package Homeworks.ex2_Time;
+//this code contributed  by @Avichai-Aziz
 public class Time2 implements Time {
 
 	//fields

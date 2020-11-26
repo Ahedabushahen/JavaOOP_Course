@@ -1,3 +1,5 @@
+package ShimonLAB.lab02;
+
 
 public class Table {
 	private int table[][];

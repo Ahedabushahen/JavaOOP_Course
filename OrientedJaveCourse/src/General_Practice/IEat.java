@@ -1,3 +1,5 @@
+package General_Practice;
+
 public interface IEat { // animal interface
 	void eat(String food);
 	void eat();

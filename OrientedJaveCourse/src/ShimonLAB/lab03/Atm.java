@@ -1,3 +1,4 @@
+package ShimonLAB.lab03;
 public class Atm {
 	String dbName;
 	private Db db;

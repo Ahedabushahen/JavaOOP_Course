@@ -1,5 +1,4 @@
-
-
+package ShimonLAB.lab03;
 public class Screen {
 public Screen() {
 	

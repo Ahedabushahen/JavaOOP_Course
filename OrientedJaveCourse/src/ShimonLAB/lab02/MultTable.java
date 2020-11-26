@@ -1,4 +1,4 @@
-
+package ShimonLAB.lab02;
 public class MultTable {
 		public static void main(String[] args){
 			Table mytable = new Table(50,50);

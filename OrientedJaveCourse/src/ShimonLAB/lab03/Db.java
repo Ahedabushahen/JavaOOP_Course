@@ -1,3 +1,4 @@
+package ShimonLAB.lab03;
 public class Db {
 	private double balance;
 	String dbName;
