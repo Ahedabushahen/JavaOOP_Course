@@ -1,5 +1,6 @@
 package ShimonLAB.lab07;
 
+
 public class City  implements Comparable<City>{
 	private String name;
 	private String country;
@@ -28,6 +29,9 @@ public class City  implements Comparable<City>{
 	public int getArea() {
 		return area;
 	}
-	
+	public int getDensity() {
+		 double denisty = (population / area);
+		 return (int)denisty;
 
+}
 }

@@ -1,5 +1,6 @@
 package ShimonLAB.lab07;
 
+
 import java.util.Comparator;
 
 public class CompareByDensity implements Comparator<City> {
