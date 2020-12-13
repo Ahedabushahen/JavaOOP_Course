@@ -1,5 +1,6 @@
 package ShimonLAB.lab08;
 
+
 public class SumTooLargeException  extends Exception{
 
 	/**

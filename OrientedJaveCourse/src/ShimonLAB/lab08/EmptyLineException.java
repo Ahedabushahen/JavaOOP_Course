@@ -1,6 +1,5 @@
 package ShimonLAB.lab08;
 
-
 public class EmptyLineException extends Exception{
 
 	/**

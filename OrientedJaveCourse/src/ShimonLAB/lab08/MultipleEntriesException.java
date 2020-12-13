@@ -1,6 +1,5 @@
 package ShimonLAB.lab08;
 
-
 public class MultipleEntriesException  extends Exception{
 
 	/**

@@ -1,6 +1,4 @@
 package ShimonLAB.lab08;
-
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -14,7 +12,8 @@ public class Exceptions {
 	double number;
 	boolean maxLines;
 	void process(String filename) {
-		
+		String input = new String();
+		String[] line= new String[10];
 		sumValues =0;
 		linesCount =0;
 		number=0;
@@ -26,15 +25,12 @@ public class Exceptions {
 				throw new EmptyFileException("Exception program - file empty");
 			}
 				while(scanner.hasNext()) {
-					String input = scanner.nextLine();
-					String[] line = input.split(" ");
-					int sumEntries= 0;
-					for(int i=0;i<line.length ;i++) {
-						if(i%2==0)
-							sumEntries++;
-					}
-					
 					try {
+					  input = scanner.nextLine();
+					if(input == null || input.length() == 0) {
+						throw new EmptyLineException();
+					}
+						line = input.split("\\s+");
 						if(line.length > 1) {
 							throw new MultipleEntriesException();
 						}
@@ -44,41 +40,39 @@ public class Exceptions {
 						if(Math.abs(number) > maxiumItem) {
 							throw new TooBigException();
 						}
-						else if(linesCount > maxiumLines && maxLines) {
+						linesCount++;
+						if(linesCount > maxiumLines && maxLines) {
 							maxLines = false;
-							linesCount++;
 							sumValues+=number;
 							throw new TooManyEntriesException();
 							
 						}
-						else if(sumValues > maxiumSum && maxLines) {
+						sumValues+=number;
+						
+						if(sumValues > maxiumSum && maxLines) {
 							maxLines = false;
-							sumValues+=number;
+							linesCount--;
 							throw new SumTooLargeException();
 						}
-						else {
-							linesCount++;
-							sumValues+=number;
-						}
+//						scanner.close();
+					}
+					catch(EmptyLineException ele) {
+						System.err.println("Exception program - empty line at line number " + linesCount);
 					}
 					catch(NumberFormatException nfe) {
 						System.err.println("Exception program - not a number.\r\nFor input string: "+'"'+input+'"'+" after processing " + linesCount + " lines.");
 						}
 					catch(MultipleEntriesException tme) {
-						System.err.println("Exception program - multiple entries in a line.\r\n" + sumEntries +" entries in line " + linesCount); //note
+						System.err.println("Exception program - multiple entries in a line.\r\n" + line.length +" entries in line " + linesCount); //note
 					}
 					catch(TooBigException tbe) {
 						System.err.println("Exception program - entry too big\noffending entry: "+number+" after processing " + linesCount + " lines.");
 					}
 					catch(TooManyEntriesException tmee) {
-						linesCount--;
 						System.err.println("Exception program - Too many entries\r\nafter processing " + linesCount+ " lines.");
-						linesCount++;
 					}
 					catch(SumTooLargeException stle) {
-						linesCount--;
 						System.err.println("Exception program - sum too large.\r\nis "+ sumValues +"(exceeding 5.0E8) after processing "+linesCount+" lines.");
-						linesCount++;
 					}
 					
 			}

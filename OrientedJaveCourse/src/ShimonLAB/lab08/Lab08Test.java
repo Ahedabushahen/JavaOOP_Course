@@ -1,5 +1,6 @@
 package ShimonLAB.lab08;
 
+
 public class Lab08Test {
 	public static void main( String[] args ){
 		 Exceptions e = new Exceptions();
