@@ -1,3 +1,5 @@
+package ShimonLAB.lab09;
+
 
 public class Product {
 	private String name;

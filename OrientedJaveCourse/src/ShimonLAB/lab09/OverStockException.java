@@ -1,3 +1,5 @@
+package ShimonLAB.lab09;
+
 
 public class OverStockException extends Exception{
 	Product product;

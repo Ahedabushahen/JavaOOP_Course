@@ -1,3 +1,5 @@
+package ShimonLAB.lab09;
+
 import java.util.HashMap;
 import java.util.Map;
 
